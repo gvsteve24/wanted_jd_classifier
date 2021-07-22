@@ -37,9 +37,9 @@
 
 ![image](https://user-images.githubusercontent.com/28102768/126638290-46140dbb-537b-432b-a654-5af54bd4ae8f.png)
 
-### Inference page 
+### Inference page
 
-![image-20210722212352706](C:\Users\JUNGHYUN LEE\AppData\Roaming\Typora\typora-user-images\image-20210722212352706.png)
+![image](https://user-images.githubusercontent.com/28102768/126661513-6efd1b8c-41c0-4892-b62f-85fd273d230e.png)
 
 ### Inference page - 1 (example inputs and corresponding result as development)
 
@@ -51,7 +51,7 @@
 
 ### Unauthorized page
 
-![image-20210722212656038](C:\Users\JUNGHYUN LEE\AppData\Roaming\Typora\typora-user-images\image-20210722212656038.png)
+![image](https://user-images.githubusercontent.com/28102768/126661299-b1e6ebb0-382e-4772-a966-0b202e6355b8.png)
 
 # Getting Started
 

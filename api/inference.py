@@ -1,4 +1,4 @@
-from preprocess import preprocess
+from preprocess import Preprocessor
 
 from collections import Counter
 import pickle
@@ -30,10 +30,20 @@ svm_prefer = CustomUnpickler(open('./model/svm_prefer_bi.pkl', 'rb')).load()
 svm_req = CustomUnpickler(open('./model/svm_req_bi.pkl', 'rb')).load()
 
 def get_prediction(data):
-    corpus_main = preprocess(data['position'])
-    corpus_pos = preprocess(data['mainTask'])
-    corpus_req = preprocess(data['requirements'])
-    corpus_prefer = preprocess(data['preferred'])
+    pp_pos = Preprocessor(data['position'])
+    pp_main = Preprocessor(data['mainTask'])
+    pp_req = Preprocessor(data['requirements'])
+    pp_pref = Preprocessor(data['preferred'])
+    
+    pp_pos.preprocess_all()
+    pp_main.preprocess_all()
+    pp_req.preprocess_all()
+    pp_pref.preprocess_all()
+
+    corpus_main = pp_pos.get_processed_corpus()
+    corpus_pos = pp_main.get_processed_corpus()
+    corpus_req = pp_req.get_processed_corpus()
+    corpus_prefer = pp_pref.get_processed_corpus()
 
     unseen_main_tfidf = t_bow.transform(corpus_main)
     unseen_pos_tfidf = t_bow.transform(corpus_pos)

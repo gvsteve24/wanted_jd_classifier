@@ -175,7 +175,7 @@
 
 
 
-# Rest API
+# Rest API (25/07/2021)
 
 - ### URL
 
@@ -190,11 +190,13 @@
 - ### Success Response
 
   **Code:** 200
+
   **Content:** `{'access_token': guard.encode_jwt_token(user)}`
 
 - ### Error Response
 
   **Code:** 500 Internal Server Error
+
   **Content:** corresponding error message from server
 
   ---
@@ -214,11 +216,13 @@
 - ### Success Response
 
   **Code:** 200
+
   **Content:** `{'access_token': new_token}`
 
 - ### Error Response
 
   **Code:** 500 Internal Server Error
+
   **Content:** corresponding error message from server
 
   ---
@@ -236,11 +240,13 @@
 - ### Success Response
 
   **Code:** 200
+
   **Content:** `{'message': f'protected endpoint (allowed user {flask_praetorian.current_user().username})'}`
 
 - ### Error Response
 
   **Code:** 500 Internal Server Error
+
   **Content:** corresponding error message from server
 
   ---
@@ -258,14 +264,17 @@
 - ### Success Response
 
   **Code:** 200
+
   **Content:** `jsonify({'class_name': class_name})`
 
 - ### Error Response
 
   **Code:** 500 Internal Server Error
+
   **Content:** corresponding error message from server
 
   **Code:** 401 Unauthorized
+
   **Content:** corresponding error message if jwt token is invalid
 
   

@@ -164,6 +164,15 @@
 | **Requirements**     | 84.15    | 84.61   | 84.48    | 83.04       | 81.93       | 81.79       |
 | **Preferred Points** | 78.52    | 78.98   | 78.65    | 77.67       | 78.26       | 77.93       |
 
+* Table update (25/07/2021)
+  * **LightGBM** model accuracy added in each N-gram methods.
+  * Every sub-documents(position, main tasks, requirements, preferred points) has been grouped into one large corpus in the document.
+
+| Model        | SVM      | SVM     | SVM      | Naive Bayes | Naive Bayes | Naive Bayes | LightGBM  | LightGBM | LightGBM  |
+| ------------ | -------- | ------- | -------- | ----------- | ----------- | ----------- | --------- | -------- | --------- |
+| **N-gram**   | Uni-gram | Bi-gram | Tri-gram | Uni-gram    | Bi-gram     | Tri-gram    | Uni-gram  | Bi-gram  | Tri-gram  |
+| **Accuracy** | 92.86    | 92.99   | 92.99    | 90.77       | 91.75       | 91.49       | **93.25** | 93.06    | **93.25** |
+
 
 
 ## Available Scripts

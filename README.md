@@ -175,6 +175,101 @@
 
 
 
+# Rest API
+
+- ### URL
+
+  Logs a user in by parsing a POST request containing user credentials and issuing a JWT token.
+
+  `/api/login`
+
+- ### Method
+
+  `POST`
+
+- ### Success Response
+
+  **Code:** 200
+  **Content:** `{'access_token': guard.encode_jwt_token(user)}`
+
+- ### Error Response
+
+  **Code:** 500 Internal Server Error
+  **Content:** corresponding error message from server
+
+  ---
+
+- ### URL
+
+  Refreshes an existing JWT by creating a new one that is a copy of the old
+
+  except that it has a refreshed access expiration.
+
+  `/api/refresh`
+
+- ### Method
+
+  `GET`
+
+- ### Success Response
+
+  **Code:** 200
+  **Content:** `{'access_token': new_token}`
+
+- ### Error Response
+
+  **Code:** 500 Internal Server Error
+  **Content:** corresponding error message from server
+
+  ---
+
+- ### URL
+
+  A protected endpoint. The auth_required decorator will require a header containing a valid JWT
+
+  `/api/protected`
+
+- ### Method
+
+  `GET`
+
+- ### Success Response
+
+  **Code:** 200
+  **Content:** `{'message': f'protected endpoint (allowed user {flask_praetorian.current_user().username})'}`
+
+- ### Error Response
+
+  **Code:** 500 Internal Server Error
+  **Content:** corresponding error message from server
+
+  ---
+
+- ### URL
+
+  predict call make request to server of model inference result of request body, which is document to classify entered by authorized user.
+
+  `/api/protected`
+
+- ### Method
+
+  `POST`
+
+- ### Success Response
+
+  **Code:** 200
+  **Content:** `jsonify({'class_name': class_name})`
+
+- ### Error Response
+
+  **Code:** 500 Internal Server Error
+  **Content:** corresponding error message from server
+
+  **Code:** 401 Unauthorized
+  **Content:** corresponding error message if jwt token is invalid
+
+  
+
 ## Available Scripts
 
 In the project directory, you can run:

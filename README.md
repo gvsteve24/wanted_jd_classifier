@@ -143,6 +143,7 @@
 7. Checkout test id and password
 
    **TEST ID**: Wanted
+
    **TEST PASSCODE**: strongpassword
 
 8. Enjoy Hacking!
@@ -153,7 +154,6 @@
 
 * [Tf-Idf Vectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn-feature-extraction-text-tfidfvectorizer) is used to make document numerical value.
 * Input document for vectorization is scored providing 'preferred points.'
-
 * Each row represents the sub-document for model to evaluate.
 
 | Model                | SVM      | SVM     | SVM      | Naive Bayes | Naive Bayes | Naive Bayes |

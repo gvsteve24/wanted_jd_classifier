@@ -10,8 +10,6 @@ class Preprocessor:
         self.document = document
         self.cur_corpus = []
         self.pre_corpus = ""
-        self.kor_only = kor_only
-        self.eng_only = eng_only
 
     def remove_generals(self):
         skip = False

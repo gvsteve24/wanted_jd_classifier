@@ -24,3 +24,5 @@ yarn-error.log*
 
 /api/my_env
 /api/customized_konlpy
+/api/database.db
+/api/.flaskenv
